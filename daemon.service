@@ -1,0 +1,15 @@
+# Filename: /lib/systemd/system/mysserver-onlined.service
+# Owner: root:root
+# Permissions: 644
+[Unit]
+Description=Start display
+After=network.target
+
+[Service]
+ExecStart=/usr/local/sbin/DisplayDaemon
+Type=simple
+Restart=always
+
+
+[Install]
+WantedBy=default.target
